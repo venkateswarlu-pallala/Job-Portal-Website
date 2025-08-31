@@ -1,0 +1,103 @@
+/* client/src/pages/JobListingPage.css */
+.job-listing-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.main-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 2rem;
+}
+
+/* --- Filter Sidebar --- */
+.filter-sidebar {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  height: fit-content; /* So it doesn't stretch full height */
+}
+.filter-sidebar h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.filter-form .form-group {
+  margin-bottom: 1rem;
+}
+.filter-form input,
+.filter-form select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+.filter-form button {
+  width: 100%;
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.filter-form button:hover {
+  background-color: #0b5ed7;
+}
+
+/* --- Main Content --- */
+.results-header {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.job-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column */
+  gap: 1.5rem;
+}
+
+.load-more-container {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.load-more-button {
+  background-color: #212529;
+  color: white;
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* --- Responsive Media Queries --- */
+@media (min-width: 768px) {
+  .job-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-layout-grid {
+    grid-template-columns: 1fr 3fr; /* Sidebar and main content */
+  }
+  .filter-sidebar {
+    position: sticky;
+    top: 6rem; /* Adjust based on navbar height */
+  }
+}
+
+@media (min-width: 1280px) {
+  .job-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large desktops */
+  }
+}

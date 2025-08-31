@@ -1,0 +1,113 @@
+/* client/src/pages/JobDetailsPage.css */
+.job-details-container {
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+/* --- Header --- */
+.job-header {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+.job-header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+.job-header .company-link {
+  font-size: 1.25rem;
+  color: #495057;
+  text-decoration: none;
+}
+.job-header .company-link:hover {
+  text-decoration: underline;
+  color: #0d6efd;
+}
+.job-meta-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  color: #6c757d;
+}
+.job-meta-info span {
+  display: flex;
+  align-items: center;
+}
+.job-meta-info svg {
+  margin-right: 0.5rem;
+}
+
+/* --- Main Layout --- */
+.main-content-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Default to single column */
+  gap: 2rem;
+}
+
+.job-description-card, .job-sidebar-card {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.job-description-card h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.job-description-card p {
+  line-height: 1.6;
+  color: #495057;
+  white-space: pre-wrap; /* Important for formatting */
+}
+
+.apply-button {
+  width: 100%;
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 700;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.apply-button:hover {
+  background-color: #0b5ed7;
+}
+
+/* --- Application Modal --- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 500px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (min-width: 1024px) {
+  .main-content-grid {
+    grid-template-columns: 2fr 1fr; /* Two columns on large screens */
+  }
+  .job-sidebar-card {
+    position: sticky;
+    top: 6rem; /* Adjust based on your navbar height */
+  }
+}

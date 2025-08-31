@@ -1,0 +1,134 @@
+/* client/src/pages/PostJobPage.css */
+.post-job-container {
+  background-color: #f9fafb;
+  padding: 3rem 1rem;
+}
+.post-job-card {
+  max-width: 56rem; /* 896px */
+  margin: auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.post-job-card h2 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-section {
+  border: 1px solid #e5e7eb;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.form-section h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 0.25rem;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  padding: 0.75rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* --- Skills Tag Input --- */
+.skills-input-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+}
+.skill-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+}
+.skill-tag button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+.skills-input-container input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+}
+
+/* --- Rich Text Editor (ReactQuill) --- */
+.ql-toolbar.ql-snow {
+  border-top-left-radius: 0.375rem;
+  border-top-right-radius: 0.375rem;
+  border-color: #d1d5db;
+}
+.ql-container.ql-snow {
+  border-bottom-left-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
+  border-color: #d1d5db;
+  min-height: 200px;
+}
+
+/* --- Alerts and Button --- */
+.alert {
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+.alert-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+.alert-success {
+  background-color: #dcfce7;
+  color: #166534;
+}
+.submit-button {
+  background-color: #2563eb;
+  color: white;
+  font-weight: 700;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.submit-button:disabled {
+  background-color: #93c5fd;
+}
+
+/* --- Responsive --- */
+@media (min-width: 768px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

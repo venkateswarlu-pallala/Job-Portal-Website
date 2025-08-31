@@ -1,0 +1,11 @@
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 70px); /* Full height minus navbar */
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 450px;
+}
