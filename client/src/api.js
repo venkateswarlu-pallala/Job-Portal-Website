@@ -1,10 +1,14 @@
 // client/src/api.js
 import axios from 'axios';
 
-const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Your backend API base URL
-});
+const API_BASE_URL = ' https://job-portal-website-bssn.onrender.com'; // Your deployed backend URL
 
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
 // This is the interceptor. It runs before every request.
 api.interceptors.request.use(
   (config) => {
